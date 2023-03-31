@@ -1,4 +1,10 @@
-.image{
+.cover-image{
     width: 845px;
     height: 450px;
+    object-fit: cover;
+}
+.author-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
