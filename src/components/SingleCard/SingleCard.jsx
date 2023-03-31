@@ -28,7 +28,7 @@ const SingleCard = ({ blog, addToBookmark }) => {
                     <h1 className='text-4xl font-medium my-4'>{title}</h1>
                 </div>
                 <div className='mb-5'>
-                    <a className='text-indigo-700 font-semibold underline' href="#">Mark As Read</a>
+                    <button onClick={markedAsRead}><a className='text-indigo-700 font-semibold underline' href="#">Mark As Read</a></button>
                 </div>
             </div>
         </div>
