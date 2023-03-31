@@ -16,8 +16,7 @@ The Hook takes an initial state value as an argument and returns an updated stat
             </div>
             <div className='my-5'>
                 <h1 className='text-2xl font-semibold border-s-8 border-indigo-700 ps-3'>Purpose of useEffect other than fetching data.</h1>
-                <h3 className='text-slate-500'>fetch will load data once, when site/web page is reloaded. on the other hand, we can use dependancy in useEffect for load data as much
-as we want load without refreshing the web page.</h3>
+                <h3 className='text-slate-500'>We can also use 'useEffect' to collect data from localStorage</h3>
             </div>
             <div className='my-5'>
                 <h1 className='text-2xl font-semibold border-s-8 border-indigo-700 ps-3'>How Does React work?</h1>
