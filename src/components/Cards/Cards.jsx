@@ -12,6 +12,9 @@ const Card = () => {
     // bookmark counting state 
     const [countBookmark, setCountBookmark] = useState(0);
 
+    //mark as read state 
+    const [readTime, setReadTime] = useState(0);
+
     // data load effect/hook 
     useEffect(() => {
         fetch('fakeData.json')
@@ -25,15 +28,20 @@ const Card = () => {
         setBookmark(newBookmark);
         setCountBookmark(countBookmark + 1)
     }
+
+    // mark as read function 
+    const markedAsRead = (time) => {
+        setReadTime(readTime + time)
+    }
     return (
         <div className='flex gap-5 my-5'>
             <div>
                 {
-                    blogs.map(blog => <SingleCard key={blog.id} blog={blog} addToBookmark={addToBookmark}></SingleCard>)
+                    blogs.map(blog => <SingleCard key={blog.id} blog={blog} addToBookmark={addToBookmark} markedAsRead={markedAsRead}></SingleCard>)
                 }
             </div>
             <div>
-                <SideBar bookmark={bookmark} countBookmark={countBookmark}></SideBar>
+                <SideBar bookmark={bookmark} countBookmark={countBookmark} readTime={readTime}></SideBar>
             </div>
         </div>
     );

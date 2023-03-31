@@ -3,7 +3,7 @@ import './SingleCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-const SingleCard = ({ blog, addToBookmark }) => {
+const SingleCard = ({ blog, addToBookmark, markedAsRead}) => {
     const { id, cover, authorImage, author, published, readTime, title } = blog;
     return (
         <div className='mb-10 border-b-2'>
@@ -28,7 +28,7 @@ const SingleCard = ({ blog, addToBookmark }) => {
                     <h1 className='text-4xl font-medium my-4'>{title}</h1>
                 </div>
                 <div className='mb-5'>
-                    <button onClick={markedAsRead}><a className='text-indigo-700 font-semibold underline' href="#">Mark As Read</a></button>
+                    <button className='text-indigo-700 font-semibold underline' onClick={() => markedAsRead(readTime)}>Mark As Read</button>
                 </div>
             </div>
         </div>

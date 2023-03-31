@@ -1,11 +1,11 @@
 import React from 'react';
 import './SideBar.css'
 
-const SideBar = ({bookmark,countBookmark}) => {
+const SideBar = ({bookmark,countBookmark,readTime}) => {
     return (
         <div className='side-bar'>
             <div className='mb-4'>
-            <h1 className='text-2xl p-4 bg-violet-200 rounded-lg text-indigo-700 border border-indigo-700 font-semibold'>Spent time on read : 0 min</h1>
+            <h1 className='text-2xl p-4 bg-violet-200 rounded-lg text-indigo-700 border border-indigo-700 font-semibold'>Spent time on read : {readTime} min</h1>
             </div>
             <div className='bg-slate-200 rounded-lg p-4'>
                 <h1 className='text-2xl font-bold'>Bookmarked Blogs : {countBookmark}</h1>
