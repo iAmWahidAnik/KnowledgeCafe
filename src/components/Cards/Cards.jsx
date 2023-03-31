@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleCard from '../SingleCard/SingleCard';
 import SideBar from '../SideBar/SideBar';
+import swal from 'sweetalert';
 
 const Card = () => {
     // blogs(card) data state 
@@ -24,6 +25,10 @@ const Card = () => {
 
     // add to bookmark function 
     const addToBookmark = title => {
+        const alreadyExist = bookmark.find(el => el === title);
+        if (alreadyExist){
+            return swal('You Have Already Bookmarked This Blog')
+        }
         const newBookmark = [...bookmark, title];
         setBookmark(newBookmark);
         setCountBookmark(countBookmark + 1)
