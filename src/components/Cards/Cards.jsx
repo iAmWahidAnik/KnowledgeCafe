@@ -39,7 +39,7 @@ const Card = () => {
         setReadTime(readTime + time)
     }
     return (
-        <div className='flex gap-5 my-5'>
+        <div className='flex flex-col md:flex-row gap-5 my-5'>
             <div>
                 {
                     blogs.map(blog => <SingleCard key={blog.id} blog={blog} addToBookmark={addToBookmark} markedAsRead={markedAsRead}></SingleCard>)
